@@ -1,6 +1,6 @@
 # Phone Regex
 
-A regex for matching phone numbers.
+A regular expression for matching phone numbers.
 
 In the near future this will be likely moved to <https://github.com/regexps>.
 
