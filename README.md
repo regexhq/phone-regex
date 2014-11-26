@@ -1,5 +1,7 @@
 # Phone Regex
 
+[![Build Status](https://travis-ci.org/johnotander/phone-regex.svg?branch=master)](https://travis-ci.org/johnotander/phone-regex)
+
 A regular expression for matching phone numbers.
 
 In the near future this will be likely moved to <https://github.com/regexps>.

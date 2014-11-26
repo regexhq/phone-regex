@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/johnotander/phone-regex/issues"
   },
-  "homepage": "https://github.com/johnotander/phone-regex"
+  "homepage": "https://github.com/johnotander/phone-regex",
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  }
 }
