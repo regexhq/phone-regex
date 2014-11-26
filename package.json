@@ -1,0 +1,29 @@
+{
+  "name": "phone-regex",
+  "version": "0.0.1",
+  "description": "Regular expression for phone numbers.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnotander/phone-regex.git"
+  },
+  "keywords": [
+    "phone",
+    "number",
+    "regex",
+    "phone-regex",
+    "phone-number"
+  ],
+  "author": "John Otander <johnotander@gmail.com> (http://johnotander.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnotander/phone-regex/issues"
+  },
+  "homepage": "https://github.com/johnotander/phone-regex"
+}

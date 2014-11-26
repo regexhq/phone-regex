@@ -2,6 +2,8 @@
 
 A regex for matching phone numbers.
 
+In the near future this will be likely moved to <https://github.com/regexps>.
+
 ## Installation
 
 ```
@@ -13,11 +15,8 @@ npm i --save phone-regex
 ```javascript
 var phone = require('phone-regex');
 
-phone.test('1234567890') // => true
-phone.test('kljhsdf') // => false
-
-'stuff (123) 456-7890 and other stuff'.match(phone()) // => true
-'lorem ipsum'.match(phone()) // => false
+phone().test('1234567890') // => true
+phone().test('kljhsdf') // => false
 ```
 
 ## Acknowledgements
