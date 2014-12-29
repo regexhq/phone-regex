@@ -4,8 +4,6 @@
 
 A regular expression for matching phone numbers.
 
-In the near future this will be likely moved to <https://github.com/regexps>.
-
 ## Installation
 
 ```
@@ -17,13 +15,23 @@ npm i --save phone-regex
 ```javascript
 var phone = require('phone-regex');
 
-phone().test('1234567890') // => true
-phone().test('kljhsdf') // => false
+// Exact string option
+phone({ exact: true }).test('1234567890')       // => true
+phone({ exact: true }).test('apple 1234567890') // => false
+
+// Global option (default)
+phone().test('1234567890')       // => true
+phone().test('apple 1234567890') // => true
+phone().test('apple')            // => false
 ```
 
 ## Acknowledgements
 
 * Regex from <http://stackoverflow.com/a/16702965/1378668>.
+
+## TODO
+
+- [ ] Don't let the regex match strings with whitespace, `" 1234567890 "`, with the exact option.
 
 ## License
 
