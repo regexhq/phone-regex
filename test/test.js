@@ -29,8 +29,23 @@ describe('phone-regex', function() {
       assert.equal(phone({ exact: true }).test('1 123 456 7890'), true);
     });
 
-    it('should not find a phone number if it is not exact', function(){
+    it('should not find a phone number if it is not exact', function() {
       assert.equal(phone({ exact: true }).test('apples 1 123 456 7890'), false);
+    });
+  });
+
+  describe('g', function() {
+
+    it('should find a phone number when it exists', function() {
+      assert.equal(phone().test('apples 1 123 456 7890'), true);
+    });
+
+    it('should find all phone numbers in a string', function() {
+      assert.equal('1 123 456 7890 orange (123) 456-7890'.match(phone()).length, 2);
+    });
+
+    it('should not find phone numbers when they do not exist', function() {
+      assert.equal('pineapples'.match(phone()), null);
     });
   });
 });
