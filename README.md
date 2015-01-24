@@ -1,6 +1,6 @@
 # Phone Regex
 
-[![Build Status](https://travis-ci.org/johnotander/phone-regex.svg?branch=master)](https://travis-ci.org/johnotander/phone-regex)
+[![Build Status](https://travis-ci.org/regexps/phone-regex.svg?branch=master)](https://travis-ci.org/regexps/phone-regex)
 
 A regular expression for matching phone numbers.
 
