@@ -29,10 +29,6 @@ phone().test('apple')            // => false
 
 * Regex from <http://stackoverflow.com/a/16702965/1378668>.
 
-## TODO
-
-- [ ] Don't let the regex match strings with whitespace, `" 1234567890 "`, with the exact option.
-
 ## License
 
 MIT
