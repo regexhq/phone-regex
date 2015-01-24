@@ -32,6 +32,14 @@ describe('phone-regex', function() {
     it('should not find a phone number if it is not exact', function() {
       assert.equal(phone({ exact: true }).test('apples 1 123 456 7890'), false);
     });
+
+    it('should not find a phone number if there is leading whitespace', function() {
+      assert.equal(phone({ exact: true }).test(' 1 123 456 7890'), false);
+    });
+
+    it('should not find a phone number if there is trailing whitespace', function() {
+      assert.equal(phone({ exact: true }).test('1 123 456 7890 '), false);
+    });
   });
 
   describe('g', function() {

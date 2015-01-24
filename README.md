@@ -1,6 +1,6 @@
 # Phone Regex
 
-[![Build Status](https://travis-ci.org/johnotander/phone-regex.svg?branch=master)](https://travis-ci.org/johnotander/phone-regex)
+[![Build Status](https://travis-ci.org/regexps/phone-regex.svg?branch=master)](https://travis-ci.org/regexps/phone-regex)
 
 A regular expression for matching phone numbers.
 
@@ -28,10 +28,6 @@ phone().test('apple')            // => false
 ## Acknowledgements
 
 * Regex from <http://stackoverflow.com/a/16702965/1378668>.
-
-## TODO
-
-- [ ] Don't let the regex match strings with whitespace, `" 1234567890 "`, with the exact option.
 
 ## License
 
