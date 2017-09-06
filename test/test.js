@@ -3,6 +3,7 @@ var phone = require('..');
 
 describe('phone-regex', function() {
 
+  // !indian exact
   describe('exact: true', function() {
 
     it('should find a (XXX) XXX-XXXX phone number when it exists', function() {
@@ -62,20 +63,25 @@ describe('phone-regex', function() {
   // indian exact
   describe('indian: true, exact: true', function() {
     
-    it('should find an Indian phone number when it exists', function() {
-      assert.equal(phone().test('+91 9744142626'), true);
+    it('should find a (+91 XXXXXXXXXX) phone number when it exists', function() {
+      assert.equal(phone({indian: true, exact: true}).test('+91 9744142626'), true);
     });
 
-    it('should find all Indian phone numbers in a string', function() {
-      assert.equal('+91 9744142626 orange 04842 274162'.match(phone()).length, 2);
+    it('should find a (XXXXX XXXXXX) phone number when it exists', function() {
+      assert.equal(phone({indian: true, exact: true}).test('04842 274162'), true);
     });
 
-    it('should not find phone numbers when they do not exist', function() {
-      assert.equal('pineapples'.match(phone()), null);
+    it('should find a (XXXXXXXXXX) phone number when it exists', function() {
+      assert.equal(phone({indian: true, exact: true}).test('9744142626'), true);
+    });
+
+    it('should find a (XXXX - XXXXXXXXXX) phone number when it exists', function() {
+      assert.equal(phone({indian: true, exact: true}).test('0091 - 9744142626'), true);
     });
 
   });
 
+  // !indian !exact
   describe('g', function() {
 
     it('should find a phone number when it exists', function() {
