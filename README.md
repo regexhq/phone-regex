@@ -26,6 +26,7 @@ phone().test('apple')            // => false
 
 // Indian option
 phone({ indian: true }).test('mango 9744142626')              // => true
+phone({ indian: true }).test('mango 1234567890')              // => false
 phone({ indian: true, exact: true }).test('mango 9744142626') // => false
 ```
 
