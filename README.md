@@ -47,4 +47,4 @@ MIT
 5. Create new Pull Request
 
 Crafted with <3 by [John Otander](http://johnotander.com).
-Support for Indian Numbers added by [Livin Mathew] (https://github.com/Livin21).
+Support for Indian Numbers added by [Livin Mathew](https://github.com/Livin21).
