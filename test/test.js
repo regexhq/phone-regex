@@ -46,7 +46,24 @@ describe('phone-regex', function() {
   describe('indian: true', function() {
     
     it('should find an Indian phone number when it exists', function() {
-      assert.equal(phone().test('mangoes +91 9744142626'), true);
+      assert.equal(phone({indian: true}).test('mangoes +91 9744142626'), true);
+    });
+
+    it('should find all Indian phone numbers in a string', function() {
+      assert.equal('+91 9744142626 orange 04842 274162'.match(phone({indian: true})).length, 2);
+    });
+
+    it('should not find phone numbers when they do not exist', function() {
+      assert.equal('pineapples'.match(phone({indian: true})), null);
+    });
+
+  });
+
+  // indian exact
+  describe('indian: true, exact: true', function() {
+    
+    it('should find an Indian phone number when it exists', function() {
+      assert.equal(phone().test('+91 9744142626'), true);
     });
 
     it('should find all Indian phone numbers in a string', function() {
@@ -56,8 +73,8 @@ describe('phone-regex', function() {
     it('should not find phone numbers when they do not exist', function() {
       assert.equal('pineapples'.match(phone()), null);
     });
-    
-  })
+
+  });
 
   describe('g', function() {
 
