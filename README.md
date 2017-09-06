@@ -23,6 +23,10 @@ phone({ exact: true }).test('apple 1234567890') // => false
 phone().test('1234567890')       // => true
 phone().test('apple 1234567890') // => true
 phone().test('apple')            // => false
+
+// Indian option
+phone({ indian: true }).test('mango 9744142626')              // => true
+phone({ indian: true, exact: true }).test('mango 9744142626') // => false
 ```
 
 ## Acknowledgements
