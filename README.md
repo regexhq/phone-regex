@@ -23,6 +23,11 @@ phone({ exact: true }).test('apple 1234567890') // => false
 phone().test('1234567890')       // => true
 phone().test('apple 1234567890') // => true
 phone().test('apple')            // => false
+
+// Indian option
+phone({ indian: true }).test('mango 9744142626')              // => true
+phone({ indian: true }).test('mango 1234567890')              // => false
+phone({ indian: true, exact: true }).test('mango 9744142626') // => false
 ```
 
 ## Acknowledgements
@@ -42,3 +47,4 @@ MIT
 5. Create new Pull Request
 
 Crafted with <3 by [John Otander](http://johnotander.com).
+Support for Indian Numbers added by [Livin Mathew](https://github.com/Livin21).
